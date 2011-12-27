@@ -8,7 +8,6 @@ license  'perl';
 build_requires 'Test::More';
 build_requires 'Test::Perl::Critic';
 
-requires 'Carp';
 requires 'Encode';
 requires 'version';
 

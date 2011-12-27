@@ -4,7 +4,6 @@ use utf8;
 use warnings;
 use version; our $VERSION = qv('0.01');
 
-use Carp;
 use Encode qw(decode_utf8);
 
 our $AREAS = {
