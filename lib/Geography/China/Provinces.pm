@@ -172,49 +172,83 @@ __END__
 
 =head1 NAME
 
-Geography::China::Provinces - [One line description of module's purpose here]
-
-
-=head1 VERSION
-
-This document describes Geography::China::Provinces version 0.01
+Geography::China::Provinces - To retrieve ISO 3166:CN standard Chinese provinces
 
 
 =head1 SYNOPSIS
 
-    use Geography::China::Provinces;
+use Geography::China::Provinces;
 
-=for author to fill in:
-    Brief code example(s) here showing commonest usage(s).
-    This section will be as far as many users bother reading
-    so make it as educational and exeplary as possible.
+my @municipals = Geography::China::Provinces->municipals;
+
+my @provinces = Geography::China::Provinces->provinces;
+
+my @autonomous_regions = Geography::China::Provinces->autonomous_regions;
+
+my @special_admin_regions = Geography::China::Provinces->special_admin_regions;
+
+my $region = Geography::China::Provinces->iso(11);
 
 
 =head1 DESCRIPTION
 
-=for author to fill in:
-    Write a full description of the module and its features here.
-    Use subsections (=head2, =head3) as appropriate.
+This module helps retrieving ISO standard Chinese provincial level divisions.
+
+
+=head1 SEE ALSO
+
+L<http://en.wikipedia.org/wiki/Provinces_of_the_People's_Republic_of_China>
 
 
 =head1 INTERFACE
 
-=for author to fill in:
-    Write a separate section listing the public components of the modules
-    interface. These normally consist of either subroutines that may be
-    exported, or methods that may be called on objects belonging to the
-    classes provided by the module.
+=head2 all
 
+my @regions = Geography::China::Provinces->all;
 
-=head1 DEPENDENCIES
+#=> Get all regions
 
-=for author to fill in:
-    A list of all the other modules that this module relies upon,
-    including any restrictions on versions, and an indication whether
-    the module is part of the standard Perl distribution, part of the
-    module's distribution, or must be installed separately. ]
+=head2 municipals
 
-None.
+my @regions = Geography::China::Provinces->municipals;
+
+#=> Get all municipal cities
+
+=head2 provinces
+
+my @regions = Geography::China::Provinces->provinces;
+
+#=> Get all provinces
+
+=head2 autonomous_regions
+
+my @regions = Geography::China::Provinces->autonomous_regions;
+
+#=> Get all autonomous regions
+
+=head2 special_admin_regions
+
+my @regions = Geography::China::Provinces->special_admin_regions;
+
+#=> Get all special administrative regions
+
+=head2 areas
+
+my %areas = Geography::China::Provinces->areas;
+
+#=> Get Chinese geographic areas as a hash
+
+=head2 area
+
+my @regions = Geography::China::Provinces->area(1);
+
+#=> Get regions in area 1
+
+=head2 area_name
+
+my @regions = Geography::China::Provinces->area_name('huadong');
+
+#=> Get regions in area `huadong'
 
 
 =head1 AUTHOR
@@ -229,26 +263,4 @@ Copyright (c) 2011, yowcow C<< <yowcow@gmail.com> >>. All rights reserved.
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.
 
-
-=head1 DISCLAIMER OF WARRANTY
-
-BECAUSE THIS SOFTWARE IS LICENSED FREE OF CHARGE, THERE IS NO WARRANTY
-FOR THE SOFTWARE, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN
-OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES
-PROVIDE THE SOFTWARE "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER
-EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE
-ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE IS WITH
-YOU. SHOULD THE SOFTWARE PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL
-NECESSARY SERVICING, REPAIR, OR CORRECTION.
-
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
-WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR
-REDISTRIBUTE THE SOFTWARE AS PERMITTED BY THE ABOVE LICENCE, BE
-LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL,
-OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
-THE SOFTWARE (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
-RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
-FAILURE OF THE SOFTWARE TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
-SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
-SUCH DAMAGES.
+=cut
