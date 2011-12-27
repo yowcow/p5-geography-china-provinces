@@ -6,6 +6,7 @@ author   q{yowcow <yowcow@gmail.com>};
 license  'perl';
 
 build_requires 'Test::More';
+build_requires 'Test::Perl::Critic';
 
 auto_install;
 
