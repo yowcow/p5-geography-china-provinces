@@ -2,7 +2,7 @@ package Geography::China::Provinces;
 use strict;
 use utf8;
 use warnings;
-use version; our $VERSION = qv('0.01');
+our $VERSION = '0.01';
 
 use Encode qw(decode_utf8);
 

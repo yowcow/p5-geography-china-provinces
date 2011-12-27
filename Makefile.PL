@@ -9,7 +9,6 @@ build_requires 'Test::More';
 build_requires 'Test::Perl::Critic';
 
 requires 'Encode';
-requires 'version';
 
 auto_install;
 
