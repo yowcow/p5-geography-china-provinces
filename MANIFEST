@@ -3,8 +3,9 @@ lib/Geography/China/Provinces.pm
 Makefile.PL
 MANIFEST			This list of files
 README
-t/00-load.t
 t/00.load.t
+t/01.area.t
+t/02.province.t
 t/perlcritic.t
 t/pod-coverage.t
 t/pod.t
