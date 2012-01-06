@@ -1,5 +1,10 @@
 Revision history for Geography-China-Provinces
 
+0.02    Fri Jan 06 2012
+    Changed method name
+        retrieve_by_category -> category
+    Fixed POD
+
 0.01    Fri Dec 23 16:00:59 2011
     Initial release.
 
