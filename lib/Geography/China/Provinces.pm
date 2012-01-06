@@ -121,25 +121,25 @@ sub all {
     map { _create_entry($_) } @$REGIONS;
 }
 
-sub retrieve_by_category {
+sub category {
     my ($class, $name) = @_;
     map { _create_entry($_) } grep { $_->{category} eq $REGION_CATEGORY_MAP->{$name} } @$REGIONS;
 }
 
 sub municipals {
-    shift->retrieve_by_category('municipality');
+    shift->category('municipality');
 }
 
 sub provinces {
-    shift->retrieve_by_category('province');
+    shift->category('province');
 }
 
 sub autonomous_regions {
-    shift->retrieve_by_category('autonomous_region');
+    shift->category('autonomous_region');
 }
 
 sub special_admin_regions {
-    shift->retrieve_by_category('special_admin_region');
+    shift->category('special_admin_region');
 }
 
 sub area {
@@ -176,17 +176,17 @@ Geography::China::Provinces - To retrieve ISO 3166:CN standard Chinese provinces
 
 =head1 SYNOPSIS
 
-use Geography::China::Provinces;
+    use Geography::China::Provinces;
 
-my @municipals = Geography::China::Provinces->municipals;
+    my @municipals = Geography::China::Provinces->municipals;
 
-my @provinces = Geography::China::Provinces->provinces;
+    my @provinces = Geography::China::Provinces->provinces;
 
-my @autonomous_regions = Geography::China::Provinces->autonomous_regions;
+    my @autonomous_regions = Geography::China::Provinces->autonomous_regions;
 
-my @special_admin_regions = Geography::China::Provinces->special_admin_regions;
+    my @special_admin_regions = Geography::China::Provinces->special_admin_regions;
 
-my $region = Geography::China::Provinces->iso(11);
+    my $region = Geography::China::Provinces->iso(11);
 
 
 =head1 DESCRIPTION
@@ -203,51 +203,53 @@ L<http://en.wikipedia.org/wiki/Provinces_of_the_People's_Republic_of_China>
 
 =head2 all
 
-my @regions = Geography::China::Provinces->all;
-
-#=> Get all regions
+    my @regions = Geography::China::Provinces->all;
+    #=> Get all regions
 
 =head2 municipals
 
-my @regions = Geography::China::Provinces->municipals;
-
-#=> Get all municipal cities
+    my @regions = Geography::China::Provinces->municipals;
+    #=> Get all municipal cities
 
 =head2 provinces
 
-my @regions = Geography::China::Provinces->provinces;
-
-#=> Get all provinces
+    my @regions = Geography::China::Provinces->provinces;
+    #=> Get all provinces
 
 =head2 autonomous_regions
 
-my @regions = Geography::China::Provinces->autonomous_regions;
-
-#=> Get all autonomous regions
+    my @regions = Geography::China::Provinces->autonomous_regions;
+    #=> Get all autonomous regions
 
 =head2 special_admin_regions
 
-my @regions = Geography::China::Provinces->special_admin_regions;
-
-#=> Get all special administrative regions
+    my @regions = Geography::China::Provinces->special_admin_regions;
+    #=> Get all special administrative regions
 
 =head2 areas
 
-my %areas = Geography::China::Provinces->areas;
-
-#=> Get Chinese geographic areas as a hash
+    my %areas = Geography::China::Provinces->areas;
+    #=> Get Chinese geographic areas as a hash
 
 =head2 area
 
-my @regions = Geography::China::Provinces->area(1);
-
-#=> Get regions in area 1
+    my @regions = Geography::China::Provinces->area(1);
+    #=> Get regions in area 1
 
 =head2 area_name
 
-my @regions = Geography::China::Provinces->area_name('huadong');
+    my @regions = Geography::China::Provinces->area_name('huadong');
+    #=> Get regions in area `huadong'
 
-#=> Get regions in area `huadong'
+=head2 iso
+
+    my $region = Geography::China::Provinces->iso(11);
+    #=> Get region with ISO code 11
+
+=head2 category
+
+    my @regions = Geography::China::Provinces->category('municipality');
+    #=> Get municipal regions
 
 
 =head1 AUTHOR
