@@ -7,9 +7,9 @@ license  'perl';
 
 build_requires 'Test::More' => '0.98';
 
+requires 'common::sense';
 requires 'Encode';
 
 auto_install;
 
 WriteAll;
-
