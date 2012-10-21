@@ -1,5 +1,10 @@
 Revision history for Geography-China-Provinces
 
+0.04    Sun Oct 21 2012
+    Migrated to Module::Install 1.06
+    Fixed typo: 特別行政區 -> 特別行政区
+    Updated email
+
 0.03    Sat Jan 07 2012
     Moved some tests from t/ to xt/
 
