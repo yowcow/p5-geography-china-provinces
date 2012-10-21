@@ -2,7 +2,7 @@ package Geography::China::Provinces;
 use strict;
 use utf8;
 use warnings;
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 use Encode qw(decode_utf8);
 
@@ -22,7 +22,7 @@ our $REGION_CATEGORIES = {
     3 => { en => 'autonomous region',
            zn => '自治区', },
     4 => { en => 'special administrative region',
-           zn => '特別行政區', },
+           zn => '特別行政区', },
 };
 our $REGION_CATEGORY_MAP = {
     'municipality'          => 1,
@@ -254,12 +254,12 @@ L<http://en.wikipedia.org/wiki/Provinces_of_the_People's_Republic_of_China>
 
 =head1 AUTHOR
 
-yowcow  C<< <yowcow@gmail.com> >>
+yowcow  C<< <yowcow@cpan.org> >>
 
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2011, yowcow C<< <yowcow@gmail.com> >>. All rights reserved.
+Copyright (c) 2011-2012, yowcow C<< <yowcow@cpan.org> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.
