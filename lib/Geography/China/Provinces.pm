@@ -16,13 +16,13 @@ our $AREAS = {
 };
 our $REGION_CATEGORIES = {
     1 => { en => 'municipality',
-           zn => '直辖市', },
+           zh => '直辖市', },
     2 => { en => 'province',
-           zn => '省', },
+           zh => '省', },
     3 => { en => 'autonomous region',
-           zn => '自治区', },
+           zh => '自治区', },
     4 => { en => 'special administrative region',
-           zn => '特別行政区', },
+           zh => '特別行政区', },
 };
 our $REGION_CATEGORY_MAP = {
     'municipality'          => 1,
