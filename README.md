@@ -82,7 +82,7 @@ yowcow  `<yowcow@cpan.org>`
 
 # LICENCE AND COPYRIGHT
 
-Copyright (c) 2011-2012, yowcow `<yowcow@cpan.org>`. All rights reserved.
+Copyright (c) 2011-2014, yowcow `<yowcow@cpan.org>`. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See [perlartistic](https://metacpan.org/pod/perlartistic).
