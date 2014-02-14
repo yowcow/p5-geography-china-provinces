@@ -1,8 +1,0 @@
-.shipit
-.git/
-.gitignore
-blib/
-pm_to_blib
-MANIFEST.*
-MYMETA.*
-Makefile$
