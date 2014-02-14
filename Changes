@@ -1,5 +1,8 @@
 Revision history for Geography-China-Provinces
 
+{{$NEXT}}
+    Fixed 'zn' to 'zh'
+
 0.04    Sun Oct 21 2012
     Migrated to Module::Install 1.06
     Fixed typo: 特別行政區 -> 特別行政区
