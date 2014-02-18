@@ -23,7 +23,7 @@ my %args = (
         'Module::Build' => 0.38,
     },
 
-    name            => 'geography-china-provinces',
+    name            => 'Geography-China-Provinces',
     module_name     => 'Geography::China::Provinces',
     allow_pureperl => 0,
 

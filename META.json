@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "geography-china-provinces",
+   "name" : "Geography-China-Provinces",
    "no_index" : {
       "directory" : [
          "t",
