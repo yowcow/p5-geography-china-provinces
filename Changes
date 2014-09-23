@@ -2,6 +2,9 @@ Revision history for Geography-China-Provinces
 
 {{$NEXT}}
 
+0.06 2014-09-23T10:21:13Z
+    Migrated to Minilla v2.1.1
+
 0.05 2014-02-18T01:07:43Z
     Fixed 'zn' to 'zh'
 
