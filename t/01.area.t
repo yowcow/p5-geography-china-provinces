@@ -1,6 +1,7 @@
 use strict;
 use warnings;
-use Test::More tests => 1;
+use Test::More;
+use Test::Pretty;
 
 use Geography::China::Provinces;
 
@@ -14,3 +15,5 @@ subtest 'areas' => sub {
         ok(exists $areas{$id}->{zh}, 'has zh');
     }
 };
+
+done_testing;
